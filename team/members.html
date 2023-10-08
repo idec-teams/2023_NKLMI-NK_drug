@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>iDEC NEFU_China 2022</title>
+		<link rel="stylesheet" type="text/css" href="../css/main_cssstyle.css">
+		        <link rel="stylesheet" type="text/css" href="../css/loader.css">
+		<style>
+			* {
+				box-sizing: border-box;
+				font-weight: normal;
+				/*text-align: center;*/
+			}
+h1{font-family: "Comic Sans MS";}
+.flip>.front p, .flip>.back p{font-family: "Times New Roman";}
+			/* 去掉头图黑色部分 */
+			header {
+				background: url("../images/1.jpg");
+				min-height: 50%;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.page-title {
+				padding-top: 10em;
+			}
+
+			.flip {
+				position: relative;
+				text-align: center;
+				/*padding: 0.2em;!*翻转卡片会出现错位*!*/
+			}
+
+			.flip>.front,
+			.flip>.back {
+				display: block;
+				transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				transition-duration: .5s;
+				transition-property: transform, opacity;
+			}
+
+			.flip>.front {
+				transform: rotateY(0deg);
+			}
+
+			.flip>.back {
+				position: absolute;
+				opacity: 0;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				transform: rotateY(-180deg);
+			}
+
+			.flip:hover>.front {
+				transform: rotateY(180deg);
+			}
+
+			.flip:hover>.back {
+				opacity: 1;
+				transform: rotateY(0deg);
+			}
+
+			.flip.flip-vertical>.back {
+				transform: rotateX(-180deg);
+			}
+
+			.flip.flip-vertical:hover>.front {
+				transform: rotateX(180deg);
+			}
+
+			.flip.flip-vertical:hover>.back {
+				transform: rotateX(0deg);
+			}
+
+			.flip {
+				position: relative;
+				display: inline-block;
+				margin: 40px 20px;
+				/*margin-bottom: 2em;*/
+				width: 380px;
+				/*卡片宽度*/
+			}
+
+			.flip>.front,
+			.flip>.back {
+				display: block;
+				color: white;
+				width: inherit;
+				background-size: cover !important;
+				background-position: center !important;
+				height: 220px;
+				/*卡片高度*/
+				padding: 1em 2em;
+				background: #90c3e2;
+				border-radius: 10px;
+			}
+
+			.flip>.front p,
+			.flip>.back p {
+				font-size: 0.9125rem;
+				line-height: 160%;
+				color: #000;
+			}
+		</style>
+	<body>
+     <!-- 页面加载动画 -->
+    <div id="loader">
+        <div aria-busy="true" aria-label="Loading" role="progressbar" class="loader-container">
+            <img  src="../images/load.gif">
+        </div>
+    </div>
+    
+    
+		<a class="skip-main" href="#slide1-chapter1">Skip to main content</a>
+		<header>
+			<nav id="normal-nav">
+				<!---- 正常情况下顶部导航栏Navigation bar (normal) -->
+				<div class="logo">
+					<a href="/">
+						<img id="nav-logo" src="../images/logo.png"
+							alt="This is our logo, but if you click it, you will return home">
+					</a>
+				</div>
+				<div class="chapters">
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="/">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Home
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Team
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="/team/members.html" class="dropdown-page cool-link2">
+								Members
+							</a>
+							<!--<a href="/team/attributions.html" class="dropdown-page cool-link2">-->
+							<!--	Attributions-->
+							<!--</a>-->
+						</div>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Project
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="/project/background.html" class="dropdown-page cool-link2">
+								Background
+							</a>
+							<a href="/project/design.html" class="dropdown-page cool-link2">
+								Design
+							</a>
+							<a href="/project/results.html" class="dropdown-page cool-link2">
+								Results
+							</a>
+							<a href="../images/report.pdf" class="dropdown-page cool-link2" target="_blank">
+								Report
+							</a>
+							<a href="../images/supplementary.pdf" class="dropdown-page cool-link2" target="_blank">
+								Supplementary information
+							</a>
+						</div>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Documentation
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							
+							<a href="/documentation/notebook.html" class="dropdown-page cool-link2">
+								Notebook
+							</a>
+						
+							<a href="/documentation/protocol.html" class="dropdown-page cool-link2">
+								Protocol
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<!------------ 页面标题PAGE TITLE -------------------->
+			<div class="page-title">
+				<div class="page-title-content" style="margin-top: 10%;">
+					<!-- <h1>MEMBERS</h1> -->
+					<!---Page title -->
+				</div>
+			</div>
+		</header>
+		<!--------------Introduction/Summary--------------------->
+		<div class="grid-normal">
+			<div class="introduction grid-normal">
+			</div>
+		</div>
+		<div class="sections-container">
+			<div class="carousel">
+				<div class="slider">
+					<!------------------------------ section 1------------------------------------>
+					<section class="slide-sections">
+						<div class="main-body">
+							<div class="main-body-content">
+								<div id="slide1-chapter1">
+									<img style="margin-top: 5%;" src="../images/team.png" alt="">
+									<div class="team-flexbox">
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../images/a1.jpg)">
+											</div>
+											<div class="back">
+												<h1>Xingrui Qi</h1>
+												<p>Xingrui Qi is currently doing her bachelor’s degree in clinical medicine. She not only shows great interest in immunology, but also tries to improve her experimental skills. 
+												</p>
+											</div>
+										</div>
+								
+									</div>
+								</div>
+								<div id="slide1-chapter2">
+									<img style="margin-top: 5%" src="../images/t1.png"
+										alt="">
+									<div class="team-flexbox">
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../images/a2.jpg)">
+											</div>
+											<div class="back">
+												<h1>Lingyun Kong</h1>
+												<p>
+												Lingyun Kong is an outgoing girl from Naval Medical University,majoring in Medical Imaging. She is fond of reading and playing the piano.</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../images/a3.jpg)">
+											</div>
+											<div class="back">
+												<h1>Songlin Zhou</h1>
+												<p>Songlin Zhou is a senior student majoring in Medical Imaging. He loves learning and is passionate about new technologies.</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front"
+												style="background-image: url(../images/a4.jpg)">
+											</div>
+											<div class="back">
+												<h1>Xiaolin Yan</h1>
+												<p>Xiaolin Yan is a clinical senior student in the Naval Medical University. She is enthusiastic about reading.</p>
+											</div>
+										</div>
+								
+						
+							
+									</div>
+								</div>
+
+						<!--		<div id="slide1-chapter3">-->
+						<!--			<img style="margin-top: 5%" src="../images/t3.png"-->
+						<!--				alt="">-->
+						<!--			<div class="team-flexbox">-->
+						<!--				<div class="flip">-->
+						<!--					<div class="front"-->
+						<!--						style="background-image: url(../images/a5.jpg)">-->
+						<!--					</div>-->
+						<!--					<div class="back">-->
+						<!--						<h1>Zhenhong Guo</h1>-->
+						<!--						<p>Professor Guo has devoted herself to immunological research for nearly three decades. She  now focus on immune metabolism and tumor immunology.-->
+						<!--						</p>-->
+						<!--					</div>-->
+						<!--				</div>-->
+						<!--<div class="flip">-->
+						<!--					<div class="front" style="background-image: url(../images/a7.jpg)">-->
+						<!--					</div>-->
+						<!--					<div class="back">-->
+						<!--						<h1>Jianhua Luo</h1>-->
+						<!--						<p>Doctor Luo is an energetic and inventive instructor. She has great patience and thinking both in research and teaching.-->
+
+
+						<!--						</p>-->
+						<!--					</div>-->
+						<!--				</div>-->
+						<!--			</div>-->
+						<!--		</div>-->
+								<div id="slide1-chapter4">
+									<img style="margin-top: 5%"
+										src="../images/t2.png " alt="">
+
+									<div class="team-flexbox" style="margin-bottom: 10%;">
+										<div class="flip">
+											<div class="front" style="background-image: url(../images/a6.jpg)">
+											</div>
+											<div class="back">
+												<h1>Meng Guo</h1>
+												<p>
+Professor Guo has rich academic achievements in immunology. Besides concentration on scientific research, he also attaches importance to cultivating talents.
+</p>
+											</div>
+										</div>
+										<div class="flip">
+											<div class="front" style="background-image: url(../images/a7.jpg)">
+											</div>
+											<div class="back">
+												<h1>Jianhua Luo</h1>
+												<p>Doctor Luo is an energetic and inventive instructor. She has great patience and thinking both in research and teaching.
+
+
+												</p>
+											</div>
+										</div>
+					
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<a href="#" id="mobile-to-top-arrow" class="to-top">
+
+			<img style="max-height: 90px" src="../images/top.png">
+		</a>
+		<!---------- 页脚FOOTER ------------>
+
+    <footer>
+        <!-- 头部波浪效果 -->
+        <div class="footer-header" style="background:white">
+            <svg class="footer-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="footer-gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="footer-parallax">
+                    <use xlink:href="#footer-gentle-wave" x="48" y="0" fill="#8FC4E3" />
+                    <use xlink:href="#footer-gentle-wave" x="48" y="3" fill="#FFBD80" />
+                    <use xlink:href="#footer-gentle-wave" x="48" y="5" fill="#FFED60" />
+                    <use xlink:href="#footer-gentle-wave" x="48" y="7" fill="#F6D1D9" />
+                </g>
+            </svg>
+        </div>
+    </footer>
+		<script src="../js/jQuery.js" type=text/javascript></script>
+		<script src="../js/detect.js" type="text/javascript"></script>
+		<script src="../js/main_javascript.js" type=text/javascript></script>
+		<script src="../js/MoveContent.js" type="text/javascript"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				MoveContentOutside();
+			});
+		</script>
+		 	<script src="../js/loader.js" type="text/javascript"></script>
+	</body>
+</html>
