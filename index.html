@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>iDEC NEFU_China 2022</title>
+		<link rel="stylesheet" type="text/css" href="css/main_cssstyle.css">
+        <link rel="stylesheet" type="text/css" href="css/loader.css">
+<!--        <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">-->
+<!--<script src="http://vjs.zencdn.net/4.12/video.js"></script>-->
+		<style>
+			a{
+			 text-decoration: none;
+			 }
+		</style>
+	</head>
+	<body>
+    
+     <!-- 页面加载动画 -->
+    <div id="loader">
+        <div aria-busy="true" aria-label="Loading" role="progressbar" class="loader-container">
+            <img  src="images/load.gif">
+        </div>
+    </div>
+    
+    
+    
+		<a class="skip-main" href="#slide1-chapter1">Skip to main content</a>
+		<div class="header-home">
+			<nav id="normal-nav">
+				<!---- 正常情况下顶部导航栏Navigation bar (normal) -->
+				<div class="logo">
+					<a href="/">
+						<img id="nav-logo" src="images/logo.png"
+							alt="This is our logo, but if you click it, you will return home">
+					</a>
+				</div>
+				<div class="chapters">
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="/">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Home
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Team
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="/team/members.html" class="dropdown-page cool-link2">
+								Members
+							</a>
+							<!--<a href="/team/attributions.html" class="dropdown-page cool-link2">-->
+							<!--	Attributions-->
+							<!--</a>-->
+						</div>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Project
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<a href="/project/background.html" class="dropdown-page cool-link2">
+								Background
+							</a>
+							<a href="/project/design.html" class="dropdown-page cool-link2">
+								Design
+							</a>
+							<a href="/project/results.html" class="dropdown-page cool-link2">
+								Results
+							</a>
+							<a href="images/report.pdf" class="dropdown-page cool-link2" target="_blank">
+								Report
+							</a>
+							<a href="images/supplementary.pdf" class="dropdown-page cool-link2" target="_blank">
+								Supplementary information
+							</a>
+						</div>
+					</div>
+					<div class="dropdown-menu cool-link">
+						<a class="chapter-nav " href="#">
+							<div class="chapter-content">
+								<div class="chapter-title active ">
+									Documentation
+								</div>
+								<div class="chapter-icon">
+									<i class="fas fa-sort-down"></i>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							
+							<a href="/documentation/notebook.html" class="dropdown-page cool-link2">
+								Notebook
+							</a>
+						
+							<a href="/documentation/protocol.html" class="dropdown-page cool-link2">
+								Protocol
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!--home主图-->
+		<div class="home-main-div">
+        
+			<img style="width: 100% ; height: 100%" src="images/home_main3.jpg" alt="">
+            
+ 
+            
+		</div>
+		<div style="display:none" id="marker" class="triangle-down"> </div>
+		<div id="home-main-body" class="main-page-home-section" style="padding: 3em 0em 0 0em ;max-width: none">
+			<!--向下的箭头-->
+			<a href="#home-main-body" class="arrow-down">
+				<div class="arrow-down-scroll2">
+					<i class="fas fa-angle-down pulse"></i>
+					<i class="fas fa-angle-down"></i>
+				</div>
+				<div class="arrow-down-scroll">
+					<i class="fas fa-angle-down pulse"></i>
+					<i class="fas fa-angle-down"></i>
+				</div>
+			</a>
+	
+			<div class="home-content">
+			               <div class="shipin">
+            
+           <video id="example_video_1" class="video-js vjs-default-skin" controls autoplay preload="none" width="70%" height="664">
+  <source src="images/1.mp4" type="video/mp4">
+</video>
+            
+            </div>
+				<p>The Theory of Evolution by natural selection was first formulated in Charles Darwin’s book “On the Origin of Species” published in 1859. According to it, species change over time and mutations happen under specific circumstances. Individuals owing traits most suitable to their environments are able to live long enough to pass down those desirable traits to offspring, which proves “survival of the fittest”. It is the changes of genes encoding functional proteins that essentially cause mutations, so the essence of evolution is the selection of specific genotypes under environmental pressure. Hence, if we could mimic the process of natural evolution in the lab 写全 , the direction of protein evolution would be control. On this basis, artificially increasing the frequency of gene mutations can accelerate the rate of evolution. The complexity of interactions of the products of gene mutations is immense. At present, the theory of directed evolution was established and used in protein engineering. It has proved to be an effective strategy for steering proteins or nucleic acids and improving, even alternating the activity of biomolecules. Frances H. Arnold, chemical engineer, was awarded the 2018 Nobel Prize for Chemistry for her work on directed evolution of enzymes and proposed the steps of molecular directed evolution. The first step is to create a gene library for diversification aimed to generate genetic diversity and identify protein variants with desired properties. Error-prone PCR and DNA editors for mutation generation are widely used. With the development of technology, CRISPR has facilitated progress in the field. The second step means screening and selection that identify or isolate evolved proteins, such as high throughput screening. Our project aims to achieve artificial evolution using a genome-scale gain-of-function CRISPR screen, in order to identifies energy metabolismas of NK cells and apply to CAR-NK cells based immunotherapy.</p>
+			
+			</div>
+		
+		</div>
+		<a href="#" id="mobile-to-top-arrow" class="to-top">
+
+			<img style="max-height: 90px" src="images/top.png">
+		</a>
+
+	
+		<!---------- 页脚FOOTER ------------>
+    <footer>
+        <!-- 头部波浪效果 -->
+        <div class="footer-header" style="background:white">
+            <svg class="footer-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="footer-gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="footer-parallax">
+                    <use xlink:href="#footer-gentle-wave" x="48" y="0" fill="#8FC4E3" />
+                    <use xlink:href="#footer-gentle-wave" x="48" y="3" fill="#FFBD80" />
+                    <use xlink:href="#footer-gentle-wave" x="48" y="5" fill="#FFED60" />
+                    <use xlink:href="#footer-gentle-wave" x="48" y="7" fill="#F6D1D9" />
+                </g>
+            </svg>
+        </div>
+    </footer>
+
+		<script src="js/jQuery.js" type=text/javascript></script>
+		<script src="js/detect.js" type="text/javascript"></script>
+		<script src="js/main_javascript.js" type=text/javascript></script>
+		<script src="js/MoveContent.js" type="text/javascript"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				MoveContentOutside();
+			});
+		</script>
+        	<script src="js/loader.js" type="text/javascript"></script>
+	</body>
+</html>
